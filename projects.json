@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Oct 22, 2026, 10:10 PM CT",
+  "updated": "Thu Oct 22, 2026, 10:12 PM CT",
   "stages": [
     "Riffing",
     "Research",
@@ -416,6 +416,23 @@
       "status": "reSID synth module on Ableton Move via Schwung; SID↔MIDI fidelity + magnifying-glass sequencer + two-way bridge in Codex brief.",
       "next_step": "Append Codex handoff to to-codex.md when Facts says go; Facts uploads Toccata via Chrome; restart Move to test 0.1.1",
       "links": [],
+      "abandoned": false
+    },
+    {
+      "id": "ju06a-patch-library",
+      "name": "Roland JU-06A patch library",
+      "stage": "Riffing",
+      "progress_percent": 5,
+      "progress_basis": "Card created Oct 22 after a thorough dig; no locked patch-library scope found.",
+      "owner": {
+        "name": "Girl Boss",
+        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+      },
+      "last_activity": "2026-10-22",
+      "status": "No dedicated JU-06A patch-library project existed on the board. Related crumbs only: a voice pitch about a Move+JU-06A librarian/editor; a read-only ju06a-test SysEx probe (cutoff/patch name, not deployed); Alpha Juno mjc design has a Patch Library menu for Alpha Juno/MKS-50 (not Boutique JU-06A); plus USB power and MIDI cabling notes. No formats, tools, or build plan locked for a JU-06A patch library yet.",
+      "next_step": "You: define what you want (browse/save/recall on Move? SysEx dumps? import Roland files?) so we can lock scope.",
+      "links": [],
+      "related": "Hardware Synths, Ableton Move / Schwung, studio map JU-06A entry.",
       "abandoned": false
     }
   ],
