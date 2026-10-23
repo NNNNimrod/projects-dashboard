@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Oct 22, 2026, 9:20 PM CT",
+  "updated": "Thu Oct 22, 2026, 10:08 PM CT",
   "stages": [
     "Riffing",
     "Research",
@@ -384,16 +384,21 @@
       "id": "dashboard",
       "name": "Project dashboard",
       "stage": "Building",
-      "progress_percent": 70,
-      "progress_basis": "v2 data file, web page and rebuild script are done; the weekly check-in and real-time updates from other bots aren't set up.",
+      "progress_percent": 85,
+      "progress_basis": "Private board + public GitHub Pages live; weekly check-in and cross-bot auto-updates not set up.",
       "owner": {
         "name": "Girl Boss",
         "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
       },
-      "last_activity": "2026-10-20",
-      "status": "projects.json is the source; build.py regenerates PROJECTS.md and index.html. Pick up now, Abandon, progress bars, stage filters.",
-      "next_step": "You: look it over; say yes to the weekly check-in if you want it.",
-      "links": [],
+      "last_activity": "2026-10-22",
+      "status": "projects.json is the source; build.py regenerates private PROJECTS.md/index.html. Public scrubbed mirror on GitHub Pages (family + Jessica frame hidden). Pick up now, Abandon, progress bars, stage filters.",
+      "next_step": "You: Add to Home screen on Android from the public URL; say yes to weekly check-in if you want it.",
+      "links": [
+        {
+          "label": "Public page (GitHub Pages)",
+          "url": "https://nnnnimrod.github.io/projects-dashboard/"
+        }
+      ],
       "related": "",
       "abandoned": false
     },
