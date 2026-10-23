@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Oct 22, 2026, 10:15 PM CT",
+  "updated": "Thu Oct 22, 2026, 10:17 PM CT",
   "stages": [
     "Riffing",
     "Research",
@@ -116,6 +116,23 @@
       "last_activity": "2026-10-22",
       "status": "Three modes: AI generation, real-image search (museums first, then Brave), your photo library (Immich on your PC). External mic, phone web app. Hardware path from Oct 20: weekend prototype ~$215 (Pi 5 + Pi 10\" touchscreen + ~$17 clip-on mic); upgrade path ~$520 (27\" matte Dell wall-mount frame). API costs about $8–38/mo.",
       "next_step": "You: pick a hardware tier — ~$215 Pi 5 + 10\" starter, or ~$520 Dell 27\" wall frame — so the prototype can start.",
+      "links": [],
+      "related": "",
+      "abandoned": false
+    },
+    {
+      "id": "jessica-frame",
+      "name": "Skubbavision",
+      "stage": "Waiting on you",
+      "progress_percent": 20,
+      "progress_basis": "Troubleshooting guide sent; no model-specific diagnosis yet.",
+      "owner": {
+        "name": "Girl Boss",
+        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+      },
+      "last_activity": "2026-10-22",
+      "status": "Jessica's digital photo frame (public name: Skubbavision). Likely causes ranked (power adapter, then memory card, then backlight) and step-by-step checks sent.",
+      "next_step": "You: the frame's brand and model, and what Jessica sees.",
       "links": [],
       "related": "",
       "abandoned": false
@@ -391,7 +408,7 @@
         "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
       },
       "last_activity": "2026-10-22",
-      "status": "projects.json is the source; build.py regenerates private PROJECTS.md/index.html. Public scrubbed mirror on GitHub Pages (family + Jessica frame hidden). Pick up now, Abandon, progress bars, stage filters.",
+      "status": "projects.json is the source; build.py regenerates private PROJECTS.md/index.html. Public scrubbed mirror on GitHub Pages (family-docs hidden; Skubbavision public). Pick up now, Abandon, progress bars, stage filters.",
       "next_step": "You: Add to Home screen on Android from the public URL; say yes to weekly check-in if you want it.",
       "links": [
         {
@@ -472,7 +489,6 @@
   ],
   "public": true,
   "hidden_from_public": [
-    "family-docs",
-    "jessica-frame"
+    "family-docs"
   ]
 }
