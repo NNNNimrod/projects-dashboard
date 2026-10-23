@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Oct 22, 2026, 10:08 PM CT",
+  "updated": "Thu Oct 22, 2026, 10:10 PM CT",
   "stages": [
     "Riffing",
     "Research",
@@ -113,9 +113,9 @@
         "name": "Girl Boss",
         "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
       },
-      "last_activity": "2026-10-20",
-      "status": "Three modes: AI generation, real-image search (museums first, then Brave), your photo library (Immich on your PC). External mic, phone web app, Pi 5 or tablet. API costs about $8–38/mo.",
-      "next_step": "You: pick a hardware tier (about $215 Pi 5 + 10\" screen starter) so the prototype can start.",
+      "last_activity": "2026-10-22",
+      "status": "Three modes: AI generation, real-image search (museums first, then Brave), your photo library (Immich on your PC). External mic, phone web app. Hardware path from Oct 20: weekend prototype ~$215 (Pi 5 + Pi 10\" touchscreen + ~$17 clip-on mic); upgrade path ~$520 (27\" matte Dell wall-mount frame). API costs about $8–38/mo.",
+      "next_step": "You: pick a hardware tier — ~$215 Pi 5 + 10\" starter, or ~$520 Dell 27\" wall frame — so the prototype can start.",
       "links": [],
       "related": "",
       "abandoned": false
