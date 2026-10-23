@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Oct 22, 2026, 10:14 PM CT",
+  "updated": "Thu Oct 22, 2026, 10:15 PM CT",
   "stages": [
     "Riffing",
     "Research",
@@ -450,6 +450,23 @@
       "next_step": "You: pick a 5.25\" drive (and confirm 3.5\" if wanted), then green-light the Greaseweazle V4.1 purchase.",
       "links": [],
       "related": "C64 PROGRAMMER, Ad Puller (drive watch), Hardware Synths / studio archive.",
+      "abandoned": false
+    },
+    {
+      "id": "c64-c128-purchase",
+      "name": "C64 / C128 purchase (tested working)",
+      "stage": "Research",
+      "progress_percent": 10,
+      "progress_basis": "Card + weekday search routine created Oct 22; no buy yet.",
+      "owner": {
+        "name": "Girl Boss",
+        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+      },
+      "last_activity": "2026-10-22",
+      "status": "Looking for a tested, working Commodore 64 or 128 in the USA — not parts, not untested as-is. No disk drive needed: load plan is Meatloaf-Fujinet (WiFi & SD). Weekday ~9 AM CT search routine covers eBay, Craigslist, Facebook Marketplace, and retro forums; reports price, seller testing claims, and links only (no purchase without your go).",
+      "next_step": "Routine will surface hits on weekday mornings; tell me max budget / C64 vs C128 preference when you have one.",
+      "links": [],
+      "related": "Commodore floppy archiver, Meatloaf / Fujinet, C64 PROGRAMMER.",
       "abandoned": false
     }
   ],
