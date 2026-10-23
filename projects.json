@@ -1,5 +1,5 @@
 {
-  "updated": "Thu Oct 22, 2026, 10:12 PM CT",
+  "updated": "Thu Oct 22, 2026, 10:13 PM CT",
   "stages": [
     "Riffing",
     "Research",
@@ -433,6 +433,23 @@
       "next_step": "You: define what you want (browse/save/recall on Move? SysEx dumps? import Roland files?) so we can lock scope.",
       "links": [],
       "related": "Hardware Synths, Ableton Move / Schwung, studio map JU-06A entry.",
+      "abandoned": false
+    },
+    {
+      "id": "floppy-archive",
+      "name": "Floppy disk archive (Greaseweazle)",
+      "stage": "Research",
+      "progress_percent": 15,
+      "progress_basis": "Oct 21 chat scoped V4.1 + drive shortlist + ADF/D64 targets; no purchase yet.",
+      "owner": {
+        "name": "Girl Boss",
+        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+      },
+      "last_activity": "2026-10-21",
+      "status": "Greaseweazle V4.1 for Amiga→ADF and C64→D64; 5.25\" + 3.5\" drives can both connect to one V4.1. 5.25\" candidates from Oct 21: TEAC FD-55GFR (~$43 eBay), Panasonic JU-475-4, Mitsumi D509V3, Epson SD-600 (~$65 GetThatPart), Mitsubishi MF504C-368U (~$75 eBay). Cheapest complete setup ~$129 before shipping. C64 read evidence is thin; writing C64 disks with a 1.2MB drive isn’t reliable. No buy yet (needs your go).",
+      "next_step": "You: pick a 5.25\" drive (and confirm 3.5\" if wanted), then green-light the Greaseweazle V4.1 purchase.",
+      "links": [],
+      "related": "C64 PROGRAMMER, Ad Puller (drive watch), Hardware Synths / studio archive.",
       "abandoned": false
     }
   ],
