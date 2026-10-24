@@ -42,8 +42,8 @@
       "progress_percent": 10,
       "progress_basis": "The plan is set (finish 10 songs before band practice, one song at a time); FFYL is the only song in active work.",
       "owner": {
-        "name": "BRAIN WATCH (Maria)",
-        "agent_id": "8f64e21b-1892-4431-b483-1ac91119e7a7"
+        "name": "Band Manager",
+        "agent_id": "10cc161a-0c08-4327-ae40-780c2a7a4618"
       },
       "last_activity": "2026-09-16",
       "status": "Maria is managing partner. Streaming/social audit done; hired vocalists (paid, not members); music-video concept for FFYL is hashed out but not rendered.",
@@ -59,8 +59,8 @@
       "progress_percent": 45,
       "progress_basis": "PC listener done (69 tests passing, password-protected, locked to your Mac); Mac side set up; end-to-end Move → SPR → Suno path, card mapper and public catalog not done.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "NNNNimrod Studio",
+        "agent_id": "ee165b9a-f9ff-496e-9662-6797483e731f"
       },
       "last_activity": "2026-10-19",
       "status": "Relay that passes prompts between studios and devices (Move, Mac, PC) to Gemini and Suno, with token checks and one-time approval codes for Suno jobs. Design: relay core + card mapper front end + GitHub catalog of connections. Codex builds the PC side through the relay mailbox on your Windows PC; Girl Boss does the Mac side. The mailbox check routine is paused.",
@@ -76,8 +76,8 @@
       "progress_percent": 40,
       "progress_basis": "Phase 1 of the interactive inventory/signal-path map is done and tested; Phase 2 (items 014–016) is pending.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "NNNNimrod Studio",
+        "agent_id": "ee165b9a-f9ff-496e-9662-6797483e731f"
       },
       "last_activity": "before 2026-10-18",
       "status": "Offline web page that maps your studio gear, signal routes and workflows, with enable/disable switches, saved setups and workflow status. Codex builds it through the mailbox. Might be what you mean by \"Know Thyself\" (a studio that knows its own gear); not confirmed.",
@@ -93,8 +93,8 @@
       "progress_percent": 35,
       "progress_basis": "Live 12 project writer and mapping pieces are built, but it can't read a real .cwp yet and nothing has been tested in Ableton.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "Cakewalk to Ableton Converter",
+        "agent_id": "71dcc7cf-b9b4-43fd-ab19-86b99b028168"
       },
       "last_activity": "2026-10-20",
       "status": "Writes tempo, markers, tracks, sends, audio/MIDI clips, plugin entries; missing-plugin check, 26-effect stock FX map, multi-timbral split/shared prompt, stems+MIDI fallback. The plan for reading .cwp files: ReaCWP → REAPER text project. Missing-file search is designed but not built.",
@@ -110,8 +110,8 @@
       "progress_percent": 25,
       "progress_basis": "Scope and hardware/pricing research are done; nothing bought or built.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "Skubbavision",
+        "agent_id": "4eb5f216-f63a-4404-bb31-9826729a86e1"
       },
       "last_activity": "2026-10-22",
       "status": "Three modes: AI generation, real-image search (museums first, then Brave), your photo library (Immich on your PC). External mic, phone web app. Hardware path from Oct 20: weekend prototype ~$215 (Pi 5 + Pi 10\" touchscreen + ~$17 clip-on mic); upgrade path ~$520 (27\" matte Dell wall-mount frame). API costs about $8–38/mo.",
@@ -127,8 +127,8 @@
       "progress_percent": 20,
       "progress_basis": "Troubleshooting guide sent; no model-specific diagnosis yet.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "Skubbavision",
+        "agent_id": "4eb5f216-f63a-4404-bb31-9826729a86e1"
       },
       "last_activity": "2026-10-22",
       "status": "Jessica's digital photo frame (public name: Skubbavision). Likely causes ranked (power adapter, then memory card, then backlight) and step-by-step checks sent.",
@@ -144,8 +144,8 @@
       "progress_percent": 40,
       "progress_basis": "Several songs drafted (Cakewalk mask song, Cathedral, Arabesque, Debussy pieces); none marked finished.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "NNNNimrod Studio",
+        "agent_id": "ee165b9a-f9ff-496e-9662-6797483e731f"
       },
       "last_activity": "2026-10-19",
       "status": "Public-domain melodies turned into new songs on Suno, with lyric/style notes, upload research and filter-dodging prompt tests.",
@@ -404,8 +404,8 @@
       "progress_percent": 85,
       "progress_basis": "Private board + public GitHub Pages live; weekly check-in and cross-bot auto-updates not set up.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "Bot Manager (Robby the Robot)",
+        "agent_id": "eb7a09cd-df0f-4061-bd96-1320d66a0163"
       },
       "last_activity": "2026-10-22",
       "status": "projects.json is the source; build.py regenerates private PROJECTS.md/index.html. Public scrubbed mirror on GitHub Pages (family-docs hidden; Skubbavision public). Pick up now, Abandon, progress bars, stage filters.",
@@ -426,8 +426,8 @@
       "progress_percent": 40,
       "progress_basis": "reSID 0.1.1 installed; Codex brief Tasks 0/A/D/B/C/E/F staged; Toccata trimmed; UI not built yet",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "Ableton Move (Optimus Prime)",
+        "agent_id": "02c3fcbb-2efa-4395-b122-606cc9e2bff1"
       },
       "last_activity": "2026-10-22",
       "status": "reSID synth module on Ableton Move via Schwung; SID↔MIDI fidelity + magnifying-glass sequencer + two-way bridge in Codex brief.",
@@ -442,8 +442,8 @@
       "progress_percent": 5,
       "progress_basis": "Card created Oct 22 after a thorough dig; no locked patch-library scope found.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "Ableton Move (Optimus Prime)",
+        "agent_id": "02c3fcbb-2efa-4395-b122-606cc9e2bff1"
       },
       "last_activity": "2026-10-22",
       "status": "No dedicated JU-06A patch-library project existed on the board. Related crumbs only: a voice pitch about a Move+JU-06A librarian/editor; a read-only ju06a-test SysEx probe (cutoff/patch name, not deployed); Alpha Juno mjc design has a Patch Library menu for Alpha Juno/MKS-50 (not Boutique JU-06A); plus USB power and MIDI cabling notes. No formats, tools, or build plan locked for a JU-06A patch library yet.",
@@ -459,8 +459,8 @@
       "progress_percent": 15,
       "progress_basis": "Oct 21 chat scoped V4.1 + drive shortlist + ADF/D64 targets; no purchase yet.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "C64 PROGRAMMER (B-9)",
+        "agent_id": "36c9b9b2-deb1-4831-9246-5290419898b3"
       },
       "last_activity": "2026-10-22",
       "status": "Greaseweazle V4.1 for Amiga→ADF and C64→D64; 5.25\" + 3.5\" drives can both connect to one V4.1. 5.25\" candidates from Oct 21: TEAC FD-55GFR (~$43 eBay), Panasonic JU-475-4, Mitsumi D509V3, Epson SD-600 (~$65 GetThatPart), Mitsubishi MF504C-368U (~$75 eBay). Cheapest complete setup ~$129 before shipping. C64 read evidence is thin; writing C64 disks with a 1.2MB drive isn’t reliable. No buy yet (needs your go).",
@@ -476,14 +476,31 @@
       "progress_percent": 10,
       "progress_basis": "Card + weekday search routine created Oct 22; no buy yet.",
       "owner": {
-        "name": "Girl Boss",
-        "agent_id": "91a2fd5b-2414-4c3b-9085-646e6dda43b4"
+        "name": "C64 PROGRAMMER (B-9)",
+        "agent_id": "36c9b9b2-deb1-4831-9246-5290419898b3"
       },
       "last_activity": "2026-10-22",
       "status": "Looking for a tested, working Commodore 64 or 128 in the USA — not parts, not untested as-is. Meatloaf-Fujinet handles loading, so a disk drive is a bonus only: prefer bare/cheaper listings, but don’t exclude ones that include a drive. Weekday ~9 AM CT search routine covers eBay, Craigslist, Facebook Marketplace, and retro forums; reports price, drive yes/no, seller testing claims, and links only (no purchase without your go).",
       "next_step": "Routine will surface hits on weekday mornings; tell me max budget / C64 vs C128 preference when you have one.",
       "links": [],
       "related": "Commodore floppy archiver, Meatloaf / Fujinet, C64 PROGRAMMER.",
+      "abandoned": false
+    },
+    {
+      "id": "ai-voice-bridge",
+      "name": "AI Voice Bridge (Coconut)",
+      "stage": "Building",
+      "progress_percent": 60,
+      "progress_basis": "dist-next-8 is built and passes 107/107 tests. dist-next-4 is the running build. Nothing has been verified against real Coconut audio yet.",
+      "owner": {
+        "name": "AI Voice Bridge",
+        "agent_id": "045e4217-a024-4dfd-be77-6eee0bf9be02"
+      },
+      "last_activity": "2026-10-24",
+      "status": "Windows app on the PC that routes voice between Grok, ChatGPT and you through VB-Audio Matrix (Coconut), using Command1 on UDP port 6980. It has gain sliders for each agent, gains for each slot, live slot retargeting, a fixed Bridge toggle with no confirmation dialog, a Send to grid button, and slot diaries (from dist-next-6). The audio clips are still robot placeholders.",
+      "next_step": "You: say whether to close dist-next-4 and launch dist-next-8, and whether retargeting should take over routes it doesn't own. Still pending: real recordings, the authority waveform, spoken alerts, the handshake sequence and the User here tag.",
+      "links": [],
+      "related": "Bridge Tester (3fcef40b-7cd2-4570-8404-49de65208d1c) is the test desk. STANDING_RULES.md and BRIDGE_RULES.md are in the same folder.",
       "abandoned": false
     }
   ],
