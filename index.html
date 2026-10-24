@@ -12,43 +12,60 @@
 <link rel="manifest" href="manifest.json">
 <style>
 :root{--bg:#0e1117;--card:#171b24;--line:#262c3a;--tx:#e6e8ee;--mut:#8b93a7;--acc:#7c9cff;
---wait:#ffb547;--build:#4fd1a5;--res:#7c9cff;--riff:#c084fc;--done:#6b7280}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:16px 14px 60px}
-header{max-width:900px;margin:0 auto 12px}h1{font-size:22px;margin:0 0 2px}.sub{color:var(--mut);font-size:13px}
-.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:10px}
-.toolbar label{font-size:12.5px;color:var(--mut)}
-.toolbar select,.toolbar button{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:10px;padding:7px 10px;font-size:13px}
-.toolbar button{cursor:pointer;font-weight:600}
-.toolbar button:hover{border-color:var(--acc)}
-.hint{font-size:12px;color:var(--mut);margin-top:6px;max-width:42em}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px auto;max-width:900px}
-.chip{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:999px;padding:6px 12px;font-size:13px;cursor:pointer}
+--wait:#ffb547;--build:#4fd1a5;--res:#7c9cff;--riff:#c084fc;--done:#6b7280;--gap:8px;--lh:16px}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:12px/1.35 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:8px 10px;display:flex;flex-direction:column}
+header{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-bottom:8px;flex:0 0 auto}
+h1{font-size:18px;margin:0}.sub{color:var(--mut);font-size:12px}
+.chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:999px;padding:3px 10px;font-size:12px;cursor:pointer}
 .chip.on{background:var(--acc);border-color:var(--acc);color:#0b0e14;font-weight:600}
-.grid{max-width:900px;margin:0 auto;display:grid;gap:12px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
-.top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
-.name{font-weight:650;font-size:16px}.bot{color:var(--mut);font-size:12.5px;margin-top:2px}
-.badge{font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;color:#0b0e14}
+.toolbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-left:auto}
+.toolbar label{font-size:12px;color:var(--mut)}
+.toolbar select,.toolbar button{border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:8px;padding:3px 8px;font-size:12px}
+.toolbar button{cursor:pointer;font-weight:600}.toolbar button:hover{border-color:var(--acc)}
+.grid{display:grid;gap:var(--gap)}
+#grid{flex:1 1 auto;min-height:0;grid-template-columns:repeat(var(--cols,6),minmax(0,1fr));grid-template-rows:repeat(var(--rows,5),minmax(0,1fr))}
+body.flow #grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));grid-template-rows:none;grid-auto-rows:190px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 9px;display:flex;flex-direction:column;min-height:0;min-width:0;overflow:hidden;cursor:pointer}
+.card:hover,.card:focus{border-color:var(--acc);outline:none}
+.top{display:flex;justify-content:space-between;gap:6px;align-items:center}
+.name{font-weight:650;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.bot{color:var(--mut);font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.badge{font-size:11px;font-weight:700;padding:1px 7px;border-radius:999px;white-space:nowrap;color:#0b0e14;flex:0 0 auto}
 .s-Waiting{background:var(--wait)}.s-Building{background:var(--build)}.s-Research{background:var(--res)}.s-Riffing{background:var(--riff)}.s-Done{background:var(--done);color:#fff}
-.bar{height:8px;background:#0b0e14;border-radius:6px;overflow:hidden;margin:12px 0 3px}.bar>i{display:block;height:100%;background:linear-gradient(90deg,#4fd1a5,#7c9cff)}
-.pct{display:flex;justify-content:space-between;font-size:12px;color:var(--mut)}
-.basis{font-size:12px;color:var(--mut);margin-top:2px}
-p{margin:10px 0 0}.lbl{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:1px}
-.links{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
-.links a,.links span{font-size:12.5px;color:var(--acc);background:#11151e;border:1px solid var(--line);border-radius:8px;padding:3px 8px;text-decoration:none;word-break:break-all}
-.links span{color:var(--mut)}
-.rel{font-size:12.5px;color:var(--mut);margin-top:8px}
-.act{display:flex;gap:8px;margin-top:12px}
-.btn{flex:1;text-align:center;border-radius:10px;padding:9px;font-weight:600;font-size:14px;text-decoration:none;border:1px solid var(--line);cursor:pointer}
+.bar{height:5px;background:#0b0e14;border-radius:4px;overflow:hidden;margin:4px 0 2px;flex:0 0 auto}.bar>i{display:block;height:100%;background:linear-gradient(90deg,#4fd1a5,#7c9cff)}
+.pct{display:flex;gap:6px;font-size:11px;color:var(--mut);white-space:nowrap}.pct b{color:var(--tx);font-weight:600}.pct span{overflow:hidden;text-overflow:ellipsis}
+.txt{flex:1 1 auto;min-height:0;overflow:hidden;margin-top:3px}
+.txt p{margin:0 0 2px;line-height:var(--lh);display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden}
+.txt .lbl{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.03em;font-weight:600;margin-right:4px}
+.foot{display:flex;gap:5px;align-items:center;margin-top:4px;flex:0 0 auto;min-width:0}
+.lk{display:flex;gap:4px;flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap}
+.lk a,.lk span{font-size:11px;color:var(--acc);background:#11151e;border:1px solid var(--line);border-radius:6px;padding:0 5px;text-decoration:none;overflow:hidden;text-overflow:ellipsis;flex:0 1 auto;min-width:0;max-width:100%}
+.lk span{color:var(--mut)}.lk .more{flex:0 0 auto;cursor:pointer}
+.sb{font-size:11.5px;font-weight:600;border-radius:7px;padding:2px 7px;text-decoration:none;border:1px solid var(--line);cursor:pointer;white-space:nowrap;flex:0 0 auto}
 .go{background:var(--acc);color:#0b0e14;border-color:var(--acc)}.ab{background:transparent;color:#f87171}.rs{background:transparent;color:var(--build)}
-details{max-width:900px;margin:22px auto 0;border-top:1px solid var(--line);padding-top:10px}
-summary{cursor:pointer;color:var(--mut)}details .card{opacity:.7}
-footer{max-width:900px;margin:24px auto 0;color:var(--mut);font-size:12.5px}footer li{margin:4px 0}
+/* full-detail view (dialog) */
+dialog{background:var(--card);color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:16px;max-width:min(680px,94vw);width:680px;max-height:90vh;overflow:auto;font-size:14px;line-height:1.45}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+.x{float:right;background:transparent;border:1px solid var(--line);color:var(--tx);border-radius:8px;padding:2px 9px;cursor:pointer;font-size:14px}
+.full .name{font-size:17px;white-space:normal}.full .bot{font-size:12.5px;white-space:normal;margin-top:2px}
+.full .bar{height:8px;margin:12px 0 3px}.full .basis{font-size:12.5px;color:var(--mut)}
+.full p{margin:10px 0 0}.full .lbl{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.04em;display:block;margin-bottom:1px}
+.full .links{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+.full .links a,.full .links span{font-size:12.5px;color:var(--acc);background:#11151e;border:1px solid var(--line);border-radius:8px;padding:3px 8px;text-decoration:none;word-break:break-all}
+.full .links span{color:var(--mut)}.full .rel{font-size:12.5px;color:var(--mut);margin-top:8px}
+.full .act{display:flex;gap:8px;margin-top:12px}.full .sb{flex:1;text-align:center;padding:9px;font-size:14px;border-radius:10px}
+#abgrid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));grid-auto-rows:180px;margin-top:10px}
+.about li{margin:4px 0}.hint{color:var(--mut)}
 .empty{color:var(--mut);text-align:center;padding:20px}
+@media (max-width:999px){body{height:auto}#grid{grid-template-columns:1fr!important;grid-template-rows:none!important;grid-auto-rows:minmax(170px,auto)}}
 </style></head><body>
 <header>
 <h1>Projects</h1>
 <div class="sub">Updated <span id="updated">Thu Oct 22, 2026, 10:17 PM CT</span> · <span id="count"></span> · <span id="refresh-status">manual</span></div>
+<div class="chips" id="chips"></div>
 <div class="toolbar">
 <label for="interval">Auto-refresh</label>
 <select id="interval" aria-label="Auto-refresh interval">
@@ -58,14 +75,18 @@ footer{max-width:900px;margin:24px auto 0;color:var(--mut);font-size:12.5px}foot
 <option value="21600000">Every 6 hours</option>
 </select>
 <button type="button" id="refresh-now">Refresh now</button>
+<button type="button" id="open-ab">Abandoned (<span id="abn">0</span>)</button>
+<button type="button" id="open-about" title="About this board">ⓘ About</button>
 </div>
-<div class="hint">Auto-refresh only reloads this page’s saved data from the host. It does <b>not</b> wake bots or recalculate project status. Bots update the board when Girl Boss republishes.</div>
 </header>
-<div class="chips" id="chips"></div>
 <div class="grid" id="grid"></div>
-<details id="abd"><summary>Abandoned (<span id="abn">0</span>)</summary><div class="grid" id="abgrid" style="margin-top:10px"></div></details>
-<footer><ul id="notes"></ul>
-<p>"Pick up now" opens that project's bot in the Grok Bot app (the link may only work inside the app). "Abandon" hides a card on this device only. Tell Girl Boss to make it permanent.</p></footer>
+<dialog id="dlg"><button class="x" data-close="1" aria-label="Close">✕</button><div id="dlgbody"></div></dialog>
+<dialog id="abd"><button class="x" data-close="1" aria-label="Close">✕</button><b>Abandoned</b><div class="grid" id="abgrid"></div></dialog>
+<dialog id="about" class="about"><button class="x" data-close="1" aria-label="Close">✕</button>
+<div class="hint">Auto-refresh only reloads this page’s saved data from the host. It does <b>not</b> wake bots or recalculate project status. Bots update the board when Girl Boss republishes.</div>
+<ul id="notes"></ul>
+<p>"Pick up now" opens that project's bot in the Grok Bot app (the link may only work inside the app). "Abandon" hides a card on this device only. Tell Girl Boss to make it permanent.</p>
+<p class="hint">Tip: click any card to see its full details (progress basis, full status, every link, related projects).</p></dialog>
 <script>
 let DATA = {"updated": "Thu Oct 22, 2026, 10:17 PM CT", "stages": ["Riffing", "Research", "Waiting on you", "Building", "Done"], "notes": ["Public mirror of Facts' project board. Family/private cards are hidden here and stay on the private local dashboard.", "Girl Boss regenerates this page when the private board updates.", "\"Pick up now\" opens the project's bot in the Grok Bot app."], "projects": [{"id": "ffyl-game", "name": "BRAIN WATCH: Fight For Your Life game", "stage": "Waiting on you", "progress_percent": 80, "progress_basis": "Full-song phone game is playable and public (build sega58); remaining work is the sega59 polish queue and later polish passes.", "owner": {"name": "BRAIN WATCH (Maria)", "agent_id": "8f64e21b-1892-4431-b483-1ac91119e7a7"}, "last_activity": "2026-10-16", "status": "Hovercraft rail-shooter for the song, Sega/OutRun-style art with Austin skyline, nuke finale, Capitol boss, script editor. sega58 is live (shipped Oct 15). The sega59 queue (instructions during fade-in, atmosphere on ascent, star acceleration, smooth lane-switch lean, locked intro window) is previewed but not built.", "next_step": "You: review the sega59 previews and say BUILD (or tweak). Maria only builds after your go.", "links": [{"label": "Play (sega58)", "url": "https://nnnnimrod.github.io/brainwatch-ffyl/game.html?v=sega58"}], "related": "Earlier spin-offs in [local path omitted] rhythm-mock (Drum Hero phone rhythm game, FFYL first chart at 129 BPM), hover-shooter, ffyl-racer, car-game-mit.", "abandoned": false}, {"id": "brain-watch-band", "name": "BRAIN WATCH band relaunch", "stage": "Riffing", "progress_percent": 10, "progress_basis": "The plan is set (finish 10 songs before band practice, one song at a time); FFYL is the only song in active work.", "owner": {"name": "Band Manager", "agent_id": "10cc161a-0c08-4327-ae40-780c2a7a4618"}, "last_activity": "2026-09-16", "status": "Maria is managing partner. Streaming/social audit done; hired vocalists (paid, not members); music-video concept for FFYL is hashed out but not rendered.", "next_step": "Pick the next song after FFYL, and say \"render\" when you want the FFYL video made.", "links": [], "related": "", "abandoned": false}, {"id": "spr", "name": "Studio Prompt Relay (SPR)", "stage": "Waiting on you", "progress_percent": 45, "progress_basis": "PC listener done (69 tests passing, password-protected, locked to your Mac); Mac side set up; end-to-end Move → SPR → Suno path, card mapper and public catalog not done.", "owner": {"name": "NNNNimrod Studio", "agent_id": "ee165b9a-f9ff-496e-9662-6797483e731f"}, "last_activity": "2026-10-19", "status": "Relay that passes prompts between studios and devices (Move, Mac, PC) to Gemini and Suno, with token checks and one-time approval codes for Suno jobs. Design: relay core + card mapper front end + GitHub catalog of connections. Codex builds the PC side through the relay mailbox on your Windows PC; Girl Boss does the Mac side. The mailbox check routine is paused.", "next_step": "Blockers: Move → SPR → Suno end-to-end wiring not built; mailbox can't wake Girl Boss, so the paused check routine needs restarting; security audit required before anything goes on GitHub (nothing is public yet).", "links": [], "related": "Also involves NNNNimrod Studio (ee165b9a-f9ff-496e-9662-6797483e731f), Ableton Move, MicroKorg Bridge MAC and Hardware Synths. Possible add-on: one pass from Suno stems to an Ableton track with MIDI.", "abandoned": false}, {"id": "studio-map", "name": "Studio Map (studio inventory)", "stage": "Building", "progress_percent": 40, "progress_basis": "Phase 1 of the interactive inventory/signal-path map is done and tested; Phase 2 (items 014–016) is pending.", "owner": {"name": "NNNNimrod Studio", "agent_id": "ee165b9a-f9ff-496e-9662-6797483e731f"}, "last_activity": "before 2026-10-18", "status": "Offline web page that maps your studio gear, signal routes and workflows, with enable/disable switches, saved setups and workflow status. Codex builds it through the mailbox. Might be what you mean by \"Know Thyself\" (a studio that knows its own gear); not confirmed.", "next_step": "Codex: Phase 2 / items 014–016.", "links": [], "related": "Feeds SPR.", "abandoned": false}, {"id": "cwp2als", "name": "Cakewalk → Ableton converter", "stage": "Waiting on you", "progress_percent": 35, "progress_basis": "Live 12 project writer and mapping pieces are built, but it can't read a real .cwp yet and nothing has been tested in Ableton.", "owner": {"name": "Cakewalk to Ableton Converter", "agent_id": "71dcc7cf-b9b4-43fd-ab19-86b99b028168"}, "last_activity": "2026-10-20", "status": "Writes tempo, markers, tracks, sends, audio/MIDI clips, plugin entries; missing-plugin check, 26-effect stock FX map, multi-timbral split/shared prompt, stems+MIDI fallback. The plan for reading .cwp files: ReaCWP → REAPER text project. Missing-file search is designed but not built.", "next_step": "You: one real .cwp plus its audio folder, your Cakewalk version, and a small Ableton test set (EQ Eight, Compressor, Glue, Gate, Saturator, one VST3, a send, one routed track).", "links": [], "related": "", "abandoned": false}, {"id": "voice-frame", "name": "Voice-controlled AI photo frame", "stage": "Research", "progress_percent": 25, "progress_basis": "Scope and hardware/pricing research are done; nothing bought or built.", "owner": {"name": "Skubbavision", "agent_id": "4eb5f216-f63a-4404-bb31-9826729a86e1"}, "last_activity": "2026-10-22", "status": "Three modes: AI generation, real-image search (museums first, then Brave), your photo library (Immich on your PC). External mic, phone web app. Hardware path from Oct 20: weekend prototype ~$215 (Pi 5 + Pi 10\" touchscreen + ~$17 clip-on mic); upgrade path ~$520 (27\" matte Dell wall-mount frame). API costs about $8–38/mo.", "next_step": "You: pick a hardware tier — ~$215 Pi 5 + 10\" starter, or ~$520 Dell 27\" wall frame — so the prototype can start.", "links": [], "related": "", "abandoned": false}, {"id": "jessica-frame", "name": "Skubbavision", "stage": "Waiting on you", "progress_percent": 20, "progress_basis": "Troubleshooting guide sent; no model-specific diagnosis yet.", "owner": {"name": "Skubbavision", "agent_id": "4eb5f216-f63a-4404-bb31-9826729a86e1"}, "last_activity": "2026-10-22", "status": "Jessica's digital photo frame (public name: Skubbavision). Likely causes ranked (power adapter, then memory card, then backlight) and step-by-step checks sent.", "next_step": "You: the frame's brand and model, and what Jessica sees.", "links": [], "related": "", "abandoned": false}, {"id": "suno-remakes", "name": "Suno classical remakes", "stage": "Building", "progress_percent": 40, "progress_basis": "Several songs drafted (Cakewalk mask song, Cathedral, Arabesque, Debussy pieces); none marked finished.", "owner": {"name": "NNNNimrod Studio", "agent_id": "ee165b9a-f9ff-496e-9662-6797483e731f"}, "last_activity": "2026-10-19", "status": "Public-domain melodies turned into new songs on Suno, with lyric/style notes, upload research and filter-dodging prompt tests.", "next_step": "Pick which song to finish next.", "links": [], "related": "Folders: suno-cakewalk, suno-cathedral, suno-arabesque, suno-plastic, suno-callme, suno-candy, debussy-*.", "abandoned": false}, {"id": "quest-ar", "name": "Quest 3 AR target game", "stage": "Done", "progress_percent": 90, "progress_basis": "Playable and published; only optional polish left.", "owner": {"name": "MetaQuest 3 Games", "agent_id": "dc5c4408-66d2-4fe9-85bc-520333c2a728"}, "last_activity": "2026-10-03", "status": "WebXR mixed-reality target practice: pin targets on your real walls and shoot them with the controllers.", "next_step": "Nothing pending.", "links": [{"label": "Play", "url": "https://nnnnimrod.github.io/quest-target-ar/"}], "related": "", "abandoned": false}, {"id": "move", "name": "Ableton Move: Movy + move-bridge", "stage": "Building", "progress_percent": 55, "progress_basis": "Movy has a first documented release (0.21.0) and move-bridge is at 0.4.1; the Move-as-agent-command-surface goal is partly there.", "owner": {"name": "Ableton Move (Optimus Prime)", "agent_id": "02c3fcbb-2efa-4395-b122-606cc9e2bff1"}, "last_activity": "before 2026-10-18", "status": "Movy: Elektron-style knob UI and 16-track sequencer on Move (Schwung). move-bridge: PC/Codex talks to the Move over its HTTP API, with voice prompts.", "next_step": "Decide the next Move feature; the Move is also SPR's voice input.", "links": [], "related": "", "abandoned": false}, {"id": "microkorg", "name": "microKorg bridge", "stage": "Building", "progress_percent": 60, "progress_basis": "CLI + MCP bridge works for CC control and program saves; voice/chat hookup optional and not finished.", "owner": {"name": "MicroKorg Bridge MAC (Gort)", "agent_id": "ddfda1fe-f74b-49f9-ad1e-c5b5a29198d8"}, "last_activity": "2026-09-17", "status": "Chat/voice AI → MIDI & SysEx for the classic microKorg, Mac-first.", "next_step": "Parked; unpark when you want more.", "links": [], "related": "", "abandoned": false}, {"id": "hardware-synths", "name": "Hardware synths hookup (Volca, Pocket Operators)", "stage": "Waiting on you", "progress_percent": 20, "progress_basis": "Gear list and Volca Beats config exist; Pocket Operator adapter work parked.", "owner": {"name": "Hardware Synths (Iron Giant)", "agent_id": "723a959d-79cd-461d-b671-ee983892e51f"}, "last_activity": "2026-09-17", "status": "You said \"park\"; the bots stopped Pocket Operator / adapter work.", "next_step": "You: unpark and say which gear to do first.", "links": [], "related": "", "abandoned": false}, {"id": "taskycab", "name": "TaskyCab / Austin Cybercab venture", "stage": "Research", "progress_percent": 30, "progress_basis": "Weekly intel and business desks are running and a paperwork checklist is drafted; buying/running a cab is blocked until Tesla opens third-party ownership.", "owner": {"name": "Cyber Cab (Gort)", "agent_id": "0b0e08ae-4567-498b-89d9-4e26df719bb2"}, "last_activity": "2026-10-19", "status": "Monday intel brief (Oct 19): a second NHTSA file opened (school-zone petition); a report that the Cybercab audit closed is false; still no date for buying a Cybercab. Fleet-manager app is the real product; rider app is mock only.", "next_step": "Oct 21 Tesla Q3 call: score the owner-terms checklist at the Oct 26 desk. Still waiting on your own-fleet vs Network-partner choice.", "links": [], "related": "Team: TaskyCab Intel (5aaf2a36-3024-41c7-b55c-5f4838b193da), TaskyCab Biz (b4c1d179-0925-4f6a-9d48-83bdabd7d0fd), TaskyCab Capital (26d774fb-baac-42f3-859c-4536706dba84).", "abandoned": false}, {"id": "trading-desk", "name": "Paper trading desk (options, portfolio, YouTube leads)", "stage": "Building", "progress_percent": 50, "progress_basis": "Ongoing routine; the scan process is set up and runs on weekdays, so % only reflects setup, not results.", "owner": {"name": "Options (C-3PO)", "agent_id": "274157a7-e822-4507-aa34-0bb2c94b032d"}, "last_activity": "2026-10-20", "status": "Paper and education only. The weekday options scan ran Oct 20: nothing clear, no ping. Cover runs a paper rebalance book; YT Leads scouts channels.", "next_step": "Nothing needed from you unless a scan pings.", "links": [], "related": "Cover (0086b99b-647b-4140-97fb-946b3d912c42), YT Leads (4ad7f32d-f3e3-4824-93ec-735902954223), MRTA (Mitch Ray setups).", "abandoned": false}, {"id": "forex", "name": "Forex paper desk", "stage": "Riffing", "progress_percent": 5, "progress_basis": "Bot and rules are set up; no saved work found.", "owner": {"name": "Forex (TARS)", "agent_id": "2da89e0f-e6e7-41c5-a9f3-6ba1e3b8ca55"}, "last_activity": "unknown", "status": "Paper FX journal idea; US-regulated brokers only.", "next_step": "Start a paper journal if you still want it.", "links": [], "related": "", "abandoned": false}, {"id": "pepe-hud", "name": "Pepe meme trading HUD", "stage": "Waiting on you", "progress_percent": 50, "progress_basis": "HUD with theme bar, meme moods and paper mode works; paused at your request.", "owner": {"name": "Dank Clips (WALL-E)", "agent_id": "e60b6624-3970-46ba-81b4-3f51fb2e9e78"}, "last_activity": "2026-09-16", "status": "Meme HUD that reacts to paper trades; stopped/paused Sep 15.", "next_step": "You: say run again, or abandon.", "links": [], "related": "", "abandoned": false}, {"id": "car-pbx", "name": "Car phone system (PBX + voip.ms)", "stage": "Waiting on you", "progress_percent": 50, "progress_basis": "PBX guide/config built; stuck on paying voip.ms.", "owner": {"name": "Operator (K-9)", "agent_id": "99d15241-db52-4ee7-b59b-a78382631689"}, "last_activity": "2026-09-01", "status": "Asterisk PBX so a laptop can ring real phones over a SIP trunk.", "next_step": "You: fund voip.ms with a normal or registered card.", "links": [], "related": "", "abandoned": false}, {"id": "x-bookmarks", "name": "X bookmark organizer", "stage": "Waiting on you", "progress_percent": 30, "progress_basis": "98 bookmarks sorted into 8 planned folders; filing blocked.", "owner": {"name": "X Helper (Data)", "agent_id": "4dc73d7c-32e5-4e09-bc72-d9aa924808a8"}, "last_activity": "2026-09-04", "status": "Filing stalled because X blocked the login from the bot's browser.", "next_step": "Retry now that the X connection is available, or abandon.", "links": [], "related": "", "abandoned": false}, {"id": "lan-acupuncture", "name": "LAN Acupuncture website rebuild", "stage": "Research", "progress_percent": 25, "progress_basis": "Old site scraped and a mockup started; nothing hosted.", "owner": {"name": "LAN Acupuncture (Marvin)", "agent_id": "a04e0238-b661-463f-9d1d-120770d4bdc2"}, "last_activity": "2026-09-02", "status": "Proof-of-concept rebuild for a friend's clinic site, off the current host. Heads-up: the notes said the domain expires Oct 1, 2026, which has passed. Check whether it was renewed.", "next_step": "Confirm the domain was renewed, then decide whether to keep going.", "links": [], "related": "", "abandoned": false}, {"id": "ged-math", "name": "GED math prep slides", "stage": "Building", "progress_percent": 30, "progress_basis": "Slides and notes started, with a set of unanswered slides; no finish line recorded.", "owner": {"name": "GED Bot (Maria)", "agent_id": "27c40064-a914-4d83-9526-9385517ca05a"}, "last_activity": "unknown", "status": "GED Ready math study slides.", "next_step": "Check with GED Bot what's left.", "links": [], "related": "", "abandoned": false}, {"id": "c64", "name": "C64 programming", "stage": "Riffing", "progress_percent": 10, "progress_basis": "Only test programs (hello, scroll demo) exist.", "owner": {"name": "C64 PROGRAMMER (B-9)", "agent_id": "36c9b9b2-deb1-4831-9246-5290419898b3"}, "last_activity": "unknown", "status": "BASIC/assembly experiments; the C64 look also feeds BRAIN WATCH art.", "next_step": "Pick a real C64 project, or abandon.", "links": [], "related": "", "abandoned": false}, {"id": "austin-shows", "name": "Austin show finder", "stage": "Done", "progress_percent": 90, "progress_basis": "Weekly/day show calendars were built and used; no standing routine.", "owner": {"name": "Austin show finder (Dewey)", "agent_id": "f6ae5745-755b-40ff-8cab-80374f47357a"}, "last_activity": "2026-09-03", "status": "Filtered live-music calendars with genre pills, band links and bios.", "next_step": "Ask Dewey for a new week anytime.", "links": [], "related": "", "abandoned": false}, {"id": "dashboard", "name": "Project dashboard", "stage": "Building", "progress_percent": 85, "progress_basis": "Private board + public GitHub Pages live; weekly check-in and cross-bot auto-updates not set up.", "owner": {"name": "Bot Manager (Robby the Robot)", "agent_id": "eb7a09cd-df0f-4061-bd96-1320d66a0163"}, "last_activity": "2026-10-22", "status": "projects.json is the source; build.py regenerates private PROJECTS.md/index.html. Public scrubbed mirror on GitHub Pages (family-docs hidden; Skubbavision public). Pick up now, Abandon, progress bars, stage filters.", "next_step": "You: Add to Home screen on Android from the public URL; say yes to weekly check-in if you want it.", "links": [{"label": "Public page (GitHub Pages)", "url": "https://nnnnimrod.github.io/projects-dashboard/"}], "related": "", "abandoned": false}, {"id": "schwung-sid", "name": "Schwung SID (reSID on Move)", "stage": "Building", "progress_percent": 40, "progress_basis": "reSID 0.1.1 installed; Codex brief Tasks 0/A/D/B/C/E/F staged; Toccata trimmed; UI not built yet", "owner": {"name": "Ableton Move (Optimus Prime)", "agent_id": "02c3fcbb-2efa-4395-b122-606cc9e2bff1"}, "last_activity": "2026-10-22", "status": "reSID synth module on Ableton Move via Schwung; SID↔MIDI fidelity + magnifying-glass sequencer + two-way bridge in Codex brief.", "next_step": "Append Codex handoff to to-codex.md when Facts says go; Facts uploads Toccata via Chrome; restart Move to test 0.1.1", "links": [], "abandoned": false}, {"id": "ju06a-patch-library", "name": "Roland JU-06A patch library", "stage": "Riffing", "progress_percent": 5, "progress_basis": "Card created Oct 22 after a thorough dig; no locked patch-library scope found.", "owner": {"name": "Ableton Move (Optimus Prime)", "agent_id": "02c3fcbb-2efa-4395-b122-606cc9e2bff1"}, "last_activity": "2026-10-22", "status": "No dedicated JU-06A patch-library project existed on the board. Related crumbs only: a voice pitch about a Move+JU-06A librarian/editor; a read-only ju06a-test SysEx probe (cutoff/patch name, not deployed); Alpha Juno mjc design has a Patch Library menu for Alpha Juno/MKS-50 (not Boutique JU-06A); plus USB power and MIDI cabling notes. No formats, tools, or build plan locked for a JU-06A patch library yet.", "next_step": "You: define what you want (browse/save/recall on Move? SysEx dumps? import Roland files?) so we can lock scope.", "links": [], "related": "Hardware Synths, Ableton Move / Schwung, studio map JU-06A entry.", "abandoned": false}, {"id": "floppy-archive", "name": "Commodore floppy archiver", "stage": "Research", "progress_percent": 15, "progress_basis": "Oct 21 chat scoped V4.1 + drive shortlist + ADF/D64 targets; no purchase yet.", "owner": {"name": "C64 PROGRAMMER (B-9)", "agent_id": "36c9b9b2-deb1-4831-9246-5290419898b3"}, "last_activity": "2026-10-22", "status": "Greaseweazle V4.1 for Amiga→ADF and C64→D64; 5.25\" + 3.5\" drives can both connect to one V4.1. 5.25\" candidates from Oct 21: TEAC FD-55GFR (~$43 eBay), Panasonic JU-475-4, Mitsumi D509V3, Epson SD-600 (~$65 GetThatPart), Mitsubishi MF504C-368U (~$75 eBay). Cheapest complete setup ~$129 before shipping. C64 read evidence is thin; writing C64 disks with a 1.2MB drive isn’t reliable. No buy yet (needs your go).", "next_step": "You: pick a 5.25\" drive (and confirm 3.5\" if wanted), then green-light the Greaseweazle V4.1 purchase.", "links": [], "related": "C64 PROGRAMMER, Ad Puller (drive watch), Hardware Synths / studio archive.", "abandoned": false}, {"id": "c64-c128-purchase", "name": "C64 / C128 purchase (tested working)", "stage": "Research", "progress_percent": 10, "progress_basis": "Card + weekday search routine created Oct 22; no buy yet.", "owner": {"name": "C64 PROGRAMMER (B-9)", "agent_id": "36c9b9b2-deb1-4831-9246-5290419898b3"}, "last_activity": "2026-10-22", "status": "Looking for a tested, working Commodore 64 or 128 in the USA — not parts, not untested as-is. Meatloaf-Fujinet handles loading, so a disk drive is a bonus only: prefer bare/cheaper listings, but don’t exclude ones that include a drive. Weekday ~9 AM CT search routine covers eBay, Craigslist, Facebook Marketplace, and retro forums; reports price, drive yes/no, seller testing claims, and links only (no purchase without your go).", "next_step": "Routine will surface hits on weekday mornings; tell me max budget / C64 vs C128 preference when you have one.", "links": [], "related": "Commodore floppy archiver, Meatloaf / Fujinet, C64 PROGRAMMER.", "abandoned": false}, {"id": "ai-voice-bridge", "name": "AI Voice Bridge (Coconut)", "stage": "Building", "progress_percent": 60, "progress_basis": "dist-next-8 is built and passes 107/107 tests. dist-next-4 is the running build. Nothing has been verified against real Coconut audio yet.", "owner": {"name": "AI Voice Bridge", "agent_id": "045e4217-a024-4dfd-be77-6eee0bf9be02"}, "last_activity": "2026-10-24", "status": "Windows app on the PC that routes voice between Grok, ChatGPT and you through VB-Audio Matrix (Coconut), using Command1 on UDP port 6980. It has gain sliders for each agent, gains for each slot, live slot retargeting, a fixed Bridge toggle with no confirmation dialog, a Send to grid button, and slot diaries (from dist-next-6). The audio clips are still robot placeholders.", "next_step": "You: say whether to close dist-next-4 and launch dist-next-8, and whether retargeting should take over routes it doesn't own. Still pending: real recordings, the authority waveform, spoken alerts, the handshake sequence and the User here tag.", "links": [], "related": "Bridge Tester (3fcef40b-7cd2-4570-8404-49de65208d1c) is the test desk. STANDING_RULES.md and BRIDGE_RULES.md are in the same folder.", "abandoned": false}], "public": true, "hidden_from_public": ["family-docs"]};
 const KEY='dash-abandoned-v1';
@@ -76,14 +97,52 @@ let filter='All';
 let timer=null;
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const isAb=p=>p.abandoned||local[p.id]===true;
-function link(l){const u=l.url||'';return /^(https?:|grokbot:)/.test(u)?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(l.label)}</a>`:`<span title="${esc(u)}">${esc(l.label)}: ${esc(u)}</span>`}
-function card(p,ab){const st=p.stage.split(' ')[0];
-return `<div class="card"><div class="top"><div><div class="name">${esc(p.name)}</div><div class="bot">${esc(p.owner.name)} · last activity ${esc(p.last_activity)}</div></div><span class="badge s-${st}">${esc(p.stage)}</span></div>
-<div class="bar"><i style="width:${+p.progress_percent||0}%"></i></div><div class="pct"><span>${+p.progress_percent||0}% done</span></div><div class="basis">${esc(p.progress_basis)}</div>
+const byId=id=>DATA.projects.find(x=>x.id===id);
+function link(l){const u=l.url||'';return /^(https?:|grokbot:)/.test(u)?`<a href="${esc(u)}" target="_blank" rel="noopener" title="${esc(u)}">${esc(l.label)}</a>`:`<span title="${esc(u)}">${esc(l.label)}: ${esc(u)}</span>`}
+function slink(l){const u=l.url||'';return /^(https?:|grokbot:)/.test(u)?`<a href="${esc(u)}" target="_blank" rel="noopener" title="${esc(l.label)}: ${esc(u)}">${esc(l.label)}</a>`:`<span title="${esc(l.label)}: ${esc(u)}">${esc(l.label)}</span>`}
+function moreLinks(p){const L=p.links||[];const extra=L.length-1+(p.related?1:0);
+ const all=L.map(l=>l.label+': '+l.url).concat(p.related?['Related: '+p.related]:[]).join('\n');
+ return (L.length?slink(L[0]):'')+(L.length?(extra>0?`<span class="more" title="${esc(all)}">+${extra} more</span>`:''):(p.related?`<span class="more" title="${esc(p.related)}">Related</span>`:''))}
+function actBtns(p,ab,cls){return `<a class="sb go" href="grokbot://app/v1/agent?id=${esc(p.owner.agent_id)}">Pick up now</a>`+
+ (ab?(p.abandoned?'':`<button class="sb rs" data-r="${esc(p.id)}">Restore</button>`):`<button class="sb ab" data-a="${esc(p.id)}" title="Abandon (hide on this device)">${cls==='full'?'Abandon':'✕'}</button>`)}
+/* compact card: everything is in the DOM / tooltip; click opens full details */
+function card(p,ab){const st=p.stage.split(' ')[0];const pc=+p.progress_percent||0;
+ const tip=`${p.name}\n${p.owner.name} · ${p.stage} · ${pc}%\nWhere it stands: ${p.status}\nNext: ${p.next_step}\n(click for full details)`;
+ return `<div class="card" tabindex="0" data-o="${esc(p.id)}" data-ab="${ab?1:0}" title="${esc(tip)}"><div class="top"><div class="name">${esc(p.name)}</div><span class="badge s-${st}">${esc(p.stage)}</span></div>
+<div class="bot">${esc(p.owner.name)} · last activity ${esc(p.last_activity)}</div>
+<div class="bar"><i style="width:${pc}%"></i></div><div class="pct"><b>${pc}%</b><span>${esc(p.progress_basis)}</span></div>
+<div class="txt"><p class="st"><span class="lbl">Now</span>${esc(p.status)}</p><p class="nx"><span class="lbl">Next</span>${esc(p.next_step)}</p></div>
+<div class="foot"><div class="lk">${moreLinks(p)}</div>${actBtns(p,ab,'c')}</div></div>`}
+function full(p,ab){const st=p.stage.split(' ')[0];const pc=+p.progress_percent||0;
+ return `<div class="full"><div class="top"><div><div class="name">${esc(p.name)}</div><div class="bot">${esc(p.owner.name)} · last activity ${esc(p.last_activity)}</div></div><span class="badge s-${st}">${esc(p.stage)}</span></div>
+<div class="bar"><i style="width:${pc}%"></i></div><div class="pct"><span>${pc}% done</span></div><div class="basis">${esc(p.progress_basis)}</div>
 <p><span class="lbl">Where it stands</span>${esc(p.status)}</p><p><span class="lbl">Next step / waiting on</span>${esc(p.next_step)}</p>
 ${(p.links||[]).length?`<div class="links">${p.links.map(link).join('')}</div>`:''}${p.related?`<div class="rel">${esc(p.related)}</div>`:''}
-<div class="act"><a class="btn go" href="grokbot://app/v1/agent?id=${esc(p.owner.agent_id)}">Pick up now</a>
-${ab?(p.abandoned?'':`<button class="btn rs" data-r="${esc(p.id)}">Restore</button>`):`<button class="btn ab" data-a="${esc(p.id)}">Abandon</button>`}</div></div>`}
+<div class="act">${actBtns(p,ab,'full')}</div></div>`}
+/* choose columns/rows so every card fits in the viewport; clamp text to the space each card gets */
+function layout(){
+ const g=document.getElementById('grid');const n=g.querySelectorAll('.card').length;
+ document.body.classList.remove('flow');
+ if(innerWidth<1000||!n){clampAll(g);return}
+ const gap=8,W=g.clientWidth,H=Math.max(0,innerHeight-g.getBoundingClientRect().top-8);
+ let best=null;
+ for(let c=3;c<=10;c++){const r=Math.ceil(n/c),cw=(W-(c-1)*gap)/c,ch=(H-(r-1)*gap)/r;if(cw<190)continue;
+  const s=Math.min(cw/1.6,ch);if(!best||s>best.s)best={c,r,s,ch}}
+ if(!best||best.ch<120){document.body.classList.add('flow');}
+ else{g.style.setProperty('--cols',best.c);g.style.setProperty('--rows',best.r);g.style.height=H+'px'}
+ clampAll(g);
+}
+function clampAll(root){
+ const lh=16;
+ root.querySelectorAll('.card').forEach(c=>{const t=c.querySelector('.txt'),s=t.querySelector('.st'),x=t.querySelector('.nx');
+  s.style.webkitLineClamp=x.style.webkitLineClamp='unset';
+  const total=Math.max(2,Math.floor((t.clientHeight-4)/lh));
+  const sl=Math.round(s.scrollHeight/lh),xl=Math.round(x.scrollHeight/lh);
+  if(sl+xl<=total)return;
+  let cx=Math.min(xl,Math.max(1,Math.floor(total/3))),cs=total-cx;
+  if(sl<cs){cs=sl;cx=total-sl}
+  s.style.webkitLineClamp=Math.max(1,cs);x.style.webkitLineClamp=Math.max(1,cx);});
+}
 function render(){
  const act=DATA.projects.filter(p=>!isAb(p)).sort((a,b)=>(ORDER[a.stage]-ORDER[b.stage])||(b.progress_percent-a.progress_percent));
  const ab=DATA.projects.filter(isAb);
@@ -96,6 +155,7 @@ function render(){
  document.getElementById('count').textContent=act.length+' active';
  document.getElementById('updated').textContent=DATA.updated||'';
  document.getElementById('notes').innerHTML=(DATA.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('');
+ layout();
 }
 async function loadRemote(){
  const st=document.getElementById('refresh-status');
@@ -122,12 +182,22 @@ function applyInterval(){
   document.getElementById('refresh-status').textContent='manual';
  }
 }
+function openCard(el){const p=byId(el.dataset.o);if(!p)return;document.getElementById('dlgbody').innerHTML=full(p,el.dataset.ab==='1');const d=document.getElementById('dlg');if(!d.open)d.showModal()}
+function closeAll(){document.querySelectorAll('dialog[open]').forEach(d=>d.close())}
 document.addEventListener('click',e=>{const t=e.target;
- if(t.dataset.f){filter=t.dataset.f;render()}
- if(t.dataset.a){const p=DATA.projects.find(x=>x.id===t.dataset.a);if(confirm('Abandon "'+p.name+'"? It moves to the Abandoned list on this device.')){local[p.id]=true;localStorage.setItem(KEY,JSON.stringify(local));render()}}
- if(t.dataset.r){delete local[t.dataset.r];localStorage.setItem(KEY,JSON.stringify(local));render()}
- if(t.id==='refresh-now'){loadRemote()}
+ if(t.dataset.close){t.closest('dialog').close();return}
+ if(t.tagName==='DIALOG'){t.close();return}
+ if(t.dataset.f){filter=t.dataset.f;render();return}
+ if(t.dataset.a){const p=byId(t.dataset.a);if(confirm('Abandon "'+p.name+'"? It moves to the Abandoned list on this device.')){local[p.id]=true;localStorage.setItem(KEY,JSON.stringify(local));closeAll();render()}return}
+ if(t.dataset.r){delete local[t.dataset.r];localStorage.setItem(KEY,JSON.stringify(local));closeAll();render();return}
+ if(t.id==='refresh-now'){loadRemote();return}
+ if(t.closest('#open-ab')){document.getElementById('abd').showModal();return}
+ if(t.closest('#open-about')){document.getElementById('about').showModal();return}
+ if(t.closest('a,button'))return;
+ const c=t.closest('.card');if(c)openCard(c);
 });
+document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.classList&&e.target.classList.contains('card')){e.preventDefault();openCard(e.target)}});
+let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(layout,100)});
 document.getElementById('interval').addEventListener('change',applyInterval);
 (function initInterval(){
  const saved=localStorage.getItem(INTERVAL_KEY);
